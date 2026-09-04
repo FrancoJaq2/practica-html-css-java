@@ -1,0 +1,443 @@
+/* 1. RESET BÁSICO: Quita los márgenes por defecto y pone una fuente moderna */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 2. FONDO Y TEXTO GENERAL (Body) */
+body {
+    background-color: #1a1a24;
+    color: #e0e0e0;
+    padding: 40px;
+    line-height: 1.6;
+    max-width: 900px; /* Evita que el texto se estire por toda la pantalla */
+    margin: 0 auto; /* Centra toda la página automáticamente */
+}
+
+/* 3. TÍTULOS */
+h1, h2, h3, h4 {
+    color: #ffffff; /* Títulos en blanco puro para que destaquen */
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+h1 {
+    font-size: 36px;
+    border-bottom: 3px solid #f1de2b; /* Una línea amarilla debajo del título principal */
+    padding-bottom: 10px;
+    display: inline-block; /* Para que la línea amarilla solo mida lo que mide el texto */
+}
+
+/* 4. PÁRRAFOS Y LISTAS */
+p {
+    font-size: 18px; /* Un tamaño muy cómodo para leer */
+    margin-bottom: 20px;
+}
+
+ul {
+    margin-left: 30px; /* Mete las listas un poco hacia la derecha */
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* 5. ENLACES NORMALES */
+a {
+    color: #f1de2b; /* Tu amarillo para los enlaces */
+    text-decoration: none; /* Le quita la línea de abajo fea por defecto */
+    transition: color 0.3s ease; /* Hace que el cambio de color sea suave */
+}
+
+a:hover {
+    color: #ffffff; /* Cuando pasas el mouse por encima, se pone blanco */
+    text-decoration: underline;
+}
+
+/* 6. BOTÓN DE VOLVER (El diseño chulo) */
+.boton-volver {
+    background-color: transparent;
+    color: #e0e0e0;
+    padding: 10px 20px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid #444;
+    display: inline-block;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.boton-volver:hover {
+    border-color: #f1de2b;
+    color: #f1de2b;
+    background-color: rgba(241, 222, 43, 0.05);
+    transform: translateX(-5px); /* Se mueve un poco a la izquierda, invitando a "volver" */
+}
+
+/* 7. IMÁGENES */
+img {
+    border-radius: 12px; /* Redondea las esquinas de tu imagen de Jinx */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Sombra elegante */
+    max-width: 100%; /* Evita que la imagen sea más grande que la pantalla */
+}
+/* 8. DISEÑO DE FORMULARIO */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #1e1e28; /* Tono profundo y moderno */
+    padding: 40px;
+    border-radius: 16px; /* Curvas más suaves y actuales */
+    border: 1px solid #2c2c3a; /* Borde sutil que le da efecto de tarjeta física */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 15px; /* Más espacio interior para que respire el texto */
+    margin-bottom: 25px;
+    background-color: #15151e; /* Fondo del input más oscuro que el formulario para dar profundidad */
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+/* El toque clave: Qué pasa cuando haces clic en un campo (Focus) */
+input:focus {
+    outline: none;
+    border-color: #f1de2b;
+    box-shadow: 0 0 0 3px rgba(241, 222, 43, 0.15); /* Resplandor amarillo sutil */
+    background-color: #1a1a24;
+}
+
+input::placeholder {
+    color: #666; /* Texto de ayuda más sutil para no competir con lo que el usuario escribe */
+}
+
+input[type="file"] {
+    padding: 12px;
+    color: #888;
+    background-color: transparent;
+    border: 1px dashed #555; /* Borde punteado clásico para subida de archivos */
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background: linear-gradient(135deg, #f1de2b 0%, #d4c21f 100%); /* Degradado sutil */
+    color: #111;
+    font-weight: bold;
+    text-transform: uppercase; /* Letras mayúsculas para más fuerza */
+    letter-spacing: 1px; /* Espacio entre letras */
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 16px;
+    box-shadow: 0 4px 15px rgba(241, 222, 43, 0.2);
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(241, 222, 43, 0.4);
+    background: linear-gradient(135deg, #fff36d 0%, #f1de2b 100%);
+}
+
+/* 9. PORTAFOLIO DE ENLACES (GitHub & Proyectos) */
+
+/* Botón principal de GitHub */
+.btn-github {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #1a1a24;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.btn-github:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+    background-color: #f1de2b; /* Se vuelve amarillo al pasar el mouse */
+    color: #1a1a24;
+    text-decoration: none;
+}
+
+/* Cuadrícula para los laboratorios */
+.grid-repos {
+    list-style: none; /* Quita los puntos negros clásicos de las listas */
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea columnas automáticas */
+    gap: 20px; /* Espacio entre cada tarjeta */
+}
+
+/* Diseño de cada tarjeta de proyecto */
+.grid-repos li a {
+    display: block; /* Obliga al enlace a comportarse como una caja */
+    background-color: #232330;
+    padding: 25px;
+    border-radius: 12px;
+    color: #e0e0e0;
+    text-decoration: none;
+    border-left: 4px solid #444; /* Borde sutil a la izquierda */
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación al pasar el mouse sobre un proyecto */
+.grid-repos li a:hover {
+    background-color: #2a2a3a;
+    transform: translateX(8px); /* La tarjeta se desliza hacia la derecha */
+    border-left: 4px solid #f1de2b; /* El borde se ilumina en amarillo */
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+/* 10. GALERÍA DE IMÁGENES (Grid Interactivo) */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.tarjeta-imagen {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden; /* Mantiene la imagen y los efectos dentro de la caja */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    aspect-ratio: 16 / 9; /* Fuerza a todas las tarjetas a tener un formato panorámico uniforme */
+    background-color: #232330; /* Color de fondo mientras carga la imagen */
+    cursor: pointer;
+}
+
+/* Ajustes para que las imágenes no se deformen */
+.tarjeta-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta automáticamente la imagen para llenar la caja perfecta */
+    transition: transform 0.5s ease;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Efectos al pasar el mouse por la tarjeta */
+.tarjeta-imagen:hover img {
+    transform: scale(1.1); /* Zoom suave a la imagen */
+}
+
+.tarjeta-imagen:hover {
+    box-shadow: 0 12px 25px rgba(241, 222, 43, 0.15); /* Resplandor amarillo en la sombra */
+}
+
+/* Barra de texto oculta que sube al interactuar */
+.overlay-texto {
+    position: absolute;
+    bottom: -60px; /* La escondemos fuera de la tarjeta por defecto */
+    left: 0;
+    width: 100%;
+    padding: 20px 15px;
+    background: linear-gradient(to top, rgba(26, 26, 36, 0.95), transparent);
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    transition: bottom 0.4s ease;
+}
+
+.tarjeta-imagen:hover .overlay-texto {
+    bottom: 0; /* El texto se desliza hacia arriba */
+}
+/* 11. DISEÑO DE LISTAS PREMIUM */
+.caja-lista {
+    background-color: #1e1e28;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #2c2c3a;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.caja-lista:hover {
+    transform: translateY(-3px);
+    border-color: #444; /* El borde se aclara un poco al pasar el mouse */
+}
+
+.caja-lista h4 {
+    color: #f1de2b;
+    margin-top: 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.caja-lista p {
+    font-size: 15px;
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+/* Lista Ordenada: Cambiamos los números feos por círculos elegantes */
+.lista-numerada {
+    list-style: none; 
+    counter-reset: contador-lista; /* Crea un contador personalizado */
+    padding-left: 0;
+}
+
+.lista-numerada li {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.lista-numerada li::before {
+    counter-increment: contador-lista;
+    content: counter(contador-lista);
+    position: absolute;
+    left: 0;
+    top: -2px;
+    background-color: #2a2a3a;
+    color: #f1de2b;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid #444;
+}
+
+/* Lista No Ordenada: Cambiamos los puntos por flechas */
+.lista-puntos {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-puntos li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.lista-puntos li::before {
+    content: "▹"; /* Símbolo de flecha moderna */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #f1de2b;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Lista de Definiciones: Aspecto de etiquetas (tags) */
+.lista-definiciones dt {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 25px;
+    display: inline-block;
+    background-color: rgba(241, 222, 43, 0.1);
+    padding: 6px 12px;
+    border-radius: 6px;
+    border-left: 3px solid #f1de2b; /* Línea lateral amarilla */
+}
+
+.lista-definiciones dd {
+    margin-left: 0;
+    margin-top: 10px;
+    padding-left: 15px;
+    border-left: 2px dashed #444; /* Línea punteada que conecta con la definición */
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.5;
+}
+/* 12. DISEÑO DE LA PÁGINA DE INICIO (INDEX) */
+
+/* Cabecera principal para darle fuerza a la introducción */
+.cabecera-inicio {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #2c2c3a;
+}
+
+.cabecera-inicio h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    border-bottom: none; /* Quitamos la línea amarilla chica para dejar el título limpio */
+}
+
+.texto-destacado {
+    font-size: 20px;
+    color: #b0b0c0;
+    max-width: 700px;
+    margin: 0 auto; /* Centra el texto */
+    line-height: 1.8;
+}
+
+/* Cuadrícula del menú principal */
+.menu-principal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Diseño de cada tarjeta clicable */
+.tarjeta-menu {
+    background-color: #1e1e28;
+    padding: 30px 20px;
+    border-radius: 16px;
+    border: 1px solid #2c2c3a;
+    text-align: center;
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-menu h3 {
+    color: #ffffff;
+    margin: 15px 0 10px 0;
+    font-size: 22px;
+}
+
+.tarjeta-menu p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 0;
+}
+
+.icono-menu {
+    font-size: 45px; /* Usamos emojis como iconos por ser livianos y rápidos */
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Efectos al pasar el mouse por encima */
+.tarjeta-menu:hover {
+    transform: translateY(-8px);
+    background-color: #232330;
+    border-color: #f1de2b;
+    box-shadow: 0 12px 25px rgba(241, 222, 43, 0.15);
+    text-decoration: none;
+}
+
+.tarjeta-menu:hover .icono-menu {
+    transform: scale(1.15) rotate(5deg); /* El icono da un pequeño "salto" divertido */
+}

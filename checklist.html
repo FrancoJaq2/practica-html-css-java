@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checklist de Aprendizaje</title>
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/checklist.css">
+</head>
+<body>
+
+<a href="index.html" class="boton-volver">Volver a Inicio</a>
+
+<header class="cabecera-inicio">
+    <h1>Checklist de Aprendizaje</h1>
+    <p class="texto-destacado">Criterio de salida para HTML, CSS y JavaScript orientado a pentesting web, con el mapeo de qué reto de Juice Shop practicar apenas domines cada concepto. Marca cada casilla cuando sientas que lo reconoces y entiendes, no hace falta escribirlo de memoria.</p>
+</header>
+
+<!-- Barra de progreso general: se actualiza sola con JS según cuántas casillas estén marcadas -->
+<div class="progreso-general">
+    <div class="progreso-general-texto">
+        <span id="progreso-contador">0 / 0 completado</span>
+        <span id="progreso-porcentaje">0%</span>
+    </div>
+    <div class="barra-progreso-fondo">
+        <div class="barra-progreso-relleno" id="barra-progreso"></div>
+    </div>
+    <button class="boton-reiniciar" id="boton-reiniciar">Reiniciar checklist</button>
+</div>
+
+<!-- SECCIÓN 1: HTML -->
+<div class="caja-lista checklist-seccion" data-seccion="html">
+    <h4>HTML — Estructura <span class="seccion-contador"></span></h4>
+    <p>Lo básico para leer cualquier página, incluida una vulnerable.</p>
+    <ul class="lista-checklist">
+        <li><label><input type="checkbox" data-id="html-1"><span>Qué es una etiqueta (tag) y cómo se abre/cierra: &lt;p&gt;texto&lt;/p&gt;</span></label></li>
+        <li><label><input type="checkbox" data-id="html-2"><span>Qué es un atributo dentro de una etiqueta: href, src, id, class, name, value</span></label></li>
+        <li><label><input type="checkbox" data-id="html-3"><span>Estructura básica de un documento: &lt;html&gt;, &lt;head&gt;, &lt;body&gt;</span></label></li>
+        <li><label><input type="checkbox" data-id="html-4"><span>Enlaces: &lt;a href="..."&gt; — a dónde apunta un link realmente</span></label></li>
+        <li><label><input type="checkbox" data-id="html-5"><span>Imágenes y recursos externos: &lt;img src="..."&gt;, &lt;script src="..."&gt;, &lt;link href="..."&gt;</span></label></li>
+        <li><label><input type="checkbox" data-id="html-6"><span>Formularios completos: &lt;form action="..." method="..."&gt; — a dónde y cómo se envían los datos (GET vs POST)</span></label></li>
+        <li><label><input type="checkbox" data-id="html-7"><span>&lt;input type="..."&gt; — tipos: text, password, hidden, checkbox, submit</span></label></li>
+        <li><label><input type="checkbox" data-id="html-8"><span>&lt;button&gt;, &lt;select&gt;, &lt;textarea&gt;</span></label></li>
+        <li><label><input type="checkbox" data-id="html-9"><span>Comentarios HTML: &lt;!-- ... --&gt; (pistas que deja el desarrollador)</span></label></li>
+        <li><label><input type="checkbox" data-id="html-10"><span>Tablas básicas: &lt;table&gt;, &lt;tr&gt;, &lt;td&gt; (solo para reconocerlas, no diseñarlas)</span></label></li>
+        <li><label><input type="checkbox" data-id="html-11"><span>Qué es el DOM (Document Object Model) — el HTML "vivo" que ves en el navegador, no el archivo original</span></label></li>
+    </ul>
+</div>
+
+<!-- SECCIÓN 2: CSS -->
+<div class="caja-lista checklist-seccion" data-seccion="css">
+    <h4>CSS — Solo lo esencial <span class="seccion-contador"></span></h4>
+    <p>La parte menos relevante para ti: con reconocer selectores y ocultamiento basta.</p>
+    <ul class="lista-checklist">
+        <li><label><input type="checkbox" data-id="css-1"><span>Qué es un selector y cómo apunta a un elemento: por etiqueta, por .clase, por #id</span></label></li>
+        <li><label><input type="checkbox" data-id="css-2"><span>display: none y visibility: hidden — elementos ocultos que igual existen en el HTML</span></label></li>
+        <li><label><input type="checkbox" data-id="css-3"><span>Que el CSS "no protege nada" — ocultar algo visualmente no es seguridad</span></label></li>
+    </ul>
+</div>
+
+<!-- SECCIÓN 3: JavaScript -->
+<div class="caja-lista checklist-seccion" data-seccion="js">
+    <h4>JavaScript — Lo que de verdad usarás <span class="seccion-contador"></span></h4>
+    <p>Aquí está el músculo real: entender la lógica, no solo reconocerla.</p>
+    <ul class="lista-checklist">
+        <li><label><input type="checkbox" data-id="js-1"><span>Qué es una variable: let, const, var — un "cajón" con un valor</span></label></li>
+        <li><label><input type="checkbox" data-id="js-2"><span>Qué es una función: bloque de código reutilizable, cómo identificar dónde empieza/termina</span></label></li>
+        <li><label><input type="checkbox" data-id="js-3"><span>Tipos de datos básicos: string, number, boolean, array, object</span></label></li>
+        <li><label><input type="checkbox" data-id="js-4"><span>Condicionales básicos: if / else — para seguir la lógica cuando leas código ajeno</span></label></li>
+        <li><label><input type="checkbox" data-id="js-5"><span>Eventos: onclick, addEventListener — cómo la página reacciona a lo que hace el usuario</span></label></li>
+        <li><label><input type="checkbox" data-id="js-6"><span>Manipulación básica del DOM: querySelector, getElementById, innerHTML</span></label></li>
+        <li><label><input type="checkbox" data-id="js-7"><span>Fetch / peticiones asíncronas: qué hace fetch() al pedir datos a un servidor</span></label></li>
+        <li><label><input type="checkbox" data-id="js-8"><span>JSON: qué es y cómo se lee (JSON.parse / JSON.stringify)</span></label></li>
+        <li><label><input type="checkbox" data-id="js-9"><span>Minificación: por qué el código de producción se ve comprimido, y cómo usar Pretty Print</span></label></li>
+        <li><label><input type="checkbox" data-id="js-10"><span>Soltura básica en DevTools: pestañas Consola, Elementos y Red (Network)</span></label></li>
+        <li><label><input type="checkbox" data-id="js-11"><span>Funciones flecha: () => {} — la forma corta de escribir funciones que verás en casi todo código moderno</span></label></li>
+        <li><label><input type="checkbox" data-id="js-12"><span>Métodos de array comunes: .map(), .filter(), .forEach() — cómo se recorren listas de datos sin un bucle for clásico</span></label></li>
+        <li><label><input type="checkbox" data-id="js-13"><span>Template literals: `texto ${variable}` — cómo se arman strings mezclando texto y variables</span></label></li>
+        <li><label><input type="checkbox" data-id="js-14"><span>Clases: class, constructor, this — cómo se agrupan datos y funciones en un mismo objeto</span></label></li>
+        <li><label><input type="checkbox" data-id="js-15"><span>Promesas y async/await — cómo el código espera una respuesta sin bloquear la página (clave para leer peticiones a un servidor)</span></label></li>
+        <li><label><input type="checkbox" data-id="js-16"><span>try/catch — cómo el código maneja errores esperados, común en código de producción real</span></label></li>
+    </ul>
+</div>
+
+<!-- SECCIÓN 4: Práctica en Juice Shop -->
+<div class="caja-lista checklist-seccion" data-seccion="practica">
+    <h4>Práctica en Juice Shop <span class="seccion-contador"></span></h4>
+    <p>Apenas marques un concepto de arriba como entendido, ven aquí y ponlo en práctica.</p>
+    <ul class="lista-checklist">
+        <li><label><input type="checkbox" data-id="prac-1"><span><strong>Variables y tipos de datos:</strong> explora el localStorage (token, bid, email) y los objetos que guarda la app en DevTools</span></label></li>
+        <li><label><input type="checkbox" data-id="prac-2"><span><strong>Funciones:</strong> con Pretty Print en main.js, busca funciones expuestas e intenta invocarlas desde la consola</span></label></li>
+        <li><label><input type="checkbox" data-id="prac-3"><span><strong>Condicionales:</strong> revisa la lógica de validación de formularios (registro, login, contraseña) buscando reglas que puedas burlar</span></label></li>
+        <li><label><input type="checkbox" data-id="prac-4"><span><strong>Arrays, objetos y JSON:</strong> abre la pestaña Network, filtra por XHR/fetch, e inspecciona las respuestas JSON</span></label></li>
+        <li><label><input type="checkbox" data-id="prac-5"><span><strong>Eventos y DOM:</strong> busca elementos ocultos con display:none o hidden usando el Inspector</span></label></li>
+        <li><label><input type="checkbox" data-id="prac-6"><span><strong>Fetch/AJAX:</strong> repite una petición desde la consola cambiando un parámetro (ej. un ID) para intentar acceder a datos ajenos</span></label></li>
+    </ul>
+</div>
+
+<script>
+// Todas las casillas de la página
+const casillas = document.querySelectorAll('.lista-checklist input[type="checkbox"]');
+const CLAVE_GUARDADO = 'checklist-aprendizaje-progreso';
+
+// 1. Cargar progreso guardado (si existe) desde localStorage
+function cargarProgreso() {
+    const guardado = JSON.parse(localStorage.getItem(CLAVE_GUARDADO) || '{}');
+    casillas.forEach((casilla) => {
+        const id = casilla.dataset.id;
+        if (guardado[id]) {
+            casilla.checked = true;
+        }
+    });
+}
+
+// 2. Guardar el estado actual de todas las casillas
+function guardarProgreso() {
+    const estado = {};
+    casillas.forEach((casilla) => {
+        estado[casilla.dataset.id] = casilla.checked;
+    });
+    localStorage.setItem(CLAVE_GUARDADO, JSON.stringify(estado));
+}
+
+// 3. Recalcular la barra de progreso general y el contador de cada sección
+function actualizarProgreso() {
+    let totalMarcadas = 0;
+
+    document.querySelectorAll('.checklist-seccion').forEach((seccion) => {
+        const casillasSeccion = seccion.querySelectorAll('input[type="checkbox"]');
+        const marcadasSeccion = seccion.querySelectorAll('input[type="checkbox"]:checked').length;
+        const contadorSpan = seccion.querySelector('.seccion-contador');
+        contadorSpan.textContent = `(${marcadasSeccion}/${casillasSeccion.length})`;
+        totalMarcadas += marcadasSeccion;
+    });
+
+    const total = casillas.length;
+    const porcentaje = total === 0 ? 0 : Math.round((totalMarcadas / total) * 100);
+
+    document.getElementById('progreso-contador').textContent = `${totalMarcadas} / ${total} completado`;
+    document.getElementById('progreso-porcentaje').textContent = `${porcentaje}%`;
+    document.getElementById('barra-progreso').style.width = `${porcentaje}%`;
+}
+
+// 4. Marcar visualmente el texto tachado cuando una casilla se marca
+function actualizarEstiloItem(casilla) {
+    const item = casilla.closest('li');
+    item.classList.toggle('item-completado', casilla.checked);
+}
+
+// Escuchar cambios en cualquier casilla
+casillas.forEach((casilla) => {
+    casilla.addEventListener('change', () => {
+        actualizarEstiloItem(casilla);
+        guardarProgreso();
+        actualizarProgreso();
+    });
+});
+
+// Botón para reiniciar todo el checklist
+document.getElementById('boton-reiniciar').addEventListener('click', () => {
+    const confirmar = confirm('¿Seguro que quieres reiniciar todo el checklist? Esto borra tu progreso guardado.');
+    if (confirmar) {
+        localStorage.removeItem(CLAVE_GUARDADO);
+        casillas.forEach((casilla) => {
+            casilla.checked = false;
+            actualizarEstiloItem(casilla);
+        });
+        actualizarProgreso();
+    }
+});
+
+// Al cargar la página: traer progreso guardado y pintar todo correctamente
+cargarProgreso();
+casillas.forEach(actualizarEstiloItem);
+actualizarProgreso();
+</script>
+
+</body>
+</html>
